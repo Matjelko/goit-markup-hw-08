@@ -1,0 +1,96 @@
+.clients{
+    &__container{
+        width: 100%;
+        min-width: 320px;
+        max-width: 1200px;
+        padding: 30px 15px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding-bottom: 60px;
+    }
+
+    &__title{
+        color: var(--text-color-black);
+        font-size: 28px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__icon{
+        border: 1px solid var(--icon-lightgrey);
+        border-radius: 4px;
+        fill: var(--icon-lightgrey);
+        background-color: var(--text-color-white);
+        margin-left: 35px;
+        margin-top: 12px;
+        transition: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover{
+            cursor: pointer;
+            fill: var(--hover-color);
+            border-color: var(--hover-color);
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        .clients__container{
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .clients__box-flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .clients__icon{
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        .clients{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .clients__container{
+            max-width: 768px;
+            margin: 0 auto;
+        }
+        
+        .clients__left{
+            margin-left: 74px;
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        .clients{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
+
+        .clients__container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 60px;
+            padding-bottom: 94px;
+        }
+
+        .clients__title{
+            font-size: 36px;
+        }
+
+        .clients__icon{
+            margin-left: 20px;
+        }
+    }
+}
